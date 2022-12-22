@@ -2,6 +2,7 @@ const express = require('express')
 const cors=require("cors")
 const dbConnect = require('./Config/db.config')
 const Quiz = require('./Modal/quiz.modal')
+const Home = require('./Modal/home.modal')
 const PORT=process.env.PORT
 const app = express()
 
