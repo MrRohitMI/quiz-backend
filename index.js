@@ -14,7 +14,18 @@ app.get("/quiz",async(req,res)=>{
     let q=await Quiz.find({})
     res.send(q)
 })
-
+app.get("/home",async(req,res)=>{
+    let h=await Home.find({})
+    res.send(h)
+})
+app.post("/home",async(req,res)=>{
+   try{
+     let newUser=await Home.create(req.body)
+     res.send(newUser)
+   }catch(e){
+    read.send(e.message)
+   }
+})
 app.listen(PORT, () => {
     dbConnect()
     console.log('server started on port 8080')})
