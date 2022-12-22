@@ -6,7 +6,7 @@ const quizSchema=new Schema({
     difficulty:{type:String,required:true},
     question:{type:String,required:true},
     correct_answer:{type:String,required:true},
-    incorrect_answer:[String]
+    incorrect_answers:[String]
 })
 const Quiz=model("quiz",quizSchema)
 module.exports=Quiz
